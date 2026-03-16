@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <rect width="1400" height="800" fill="#f3f3f3"/>
+  <rect x="120" y="160" width="1160" height="480" fill="#dedede"/>
+  <text x="140" y="220" fill="#a0a0a0" font-family="system-ui, -apple-system, BlinkMacSystemFont" font-size="18" letter-spacing="4">
+    PLACEHOLDER  STUDIO
+  </text>
+</svg>

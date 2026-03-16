@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f2f2f2"/>
+  <rect x="60" y="100" width="480" height="220" fill="#dfdfdf"/>
+  <text x="80" y="150" fill="#9a9a9a" font-family="system-ui, -apple-system, BlinkMacSystemFont" font-size="14" letter-spacing="3">
+    CASA DELTA  THUMB
+  </text>
+</svg>

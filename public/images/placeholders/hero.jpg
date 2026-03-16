@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f3f3f3"/>
+  <rect x="140" y="220" width="1320" height="460" fill="#dedede"/>
+  <text x="160" y="280" fill="#a0a0a0" font-family="system-ui, -apple-system, BlinkMacSystemFont" font-size="18" letter-spacing="4">
+    PLACEHOLDER  HERO
+  </text>
+</svg>

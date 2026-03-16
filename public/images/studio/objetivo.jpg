@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f6f6f6"/>
+  <rect x="100" y="160" width="1000" height="480" fill="#e3e3e3"/>
+  <text x="120" y="220" fill="#9a9a9a" font-family="system-ui, -apple-system, BlinkMacSystemFont" font-size="16" letter-spacing="4">
+    STUDIO  OBJETIVO
+  </text>
+</svg>
