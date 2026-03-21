@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <Button
                   href="https://wa.me/"
                   variant="primary"
-                  className="text-[10px]"
+                  className="rounded-none text-[10px]"
                 >
                   Escribir por WhatsApp
                 </Button>

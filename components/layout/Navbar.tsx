@@ -14,24 +14,31 @@ export function Navbar() {
       <Container className="flex h-16 items-center justify-between md:h-20">
         <Link
           href="/"
-          className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em]"
+          className="flex items-center text-[24px] font-semibold uppercase"
           aria-label="Ir al inicio ARQ.O"
           onClick={() => setOpen(false)}
         >
-          <span className="relative h-7 w-7 overflow-hidden rounded-full border border-border">
+          <span className="relative h-8 w-8 md:h-10 md:w-10">
             <Image
-              src="/logo.png"
+              src="/images/brand/logo-negro.png"
               alt="Logo ARQ.O"
               fill
-              sizes="28px"
-              className="object-cover"
+              sizes="(min-width: 768px) 40px, 32px"
+              className="object-contain"
             />
           </span>
-          <span>ARQ.O</span>
+          <span className="relative h-24 w-24 md:h-24 md:w-24">
+            <Image
+              src="/images/brand/brand-negro.png"
+              alt="Logo ARQ.O"
+              fill
+              className="object-contain"
+            />
+          </span>
         </Link>
 
         {/* Navegación desktop */}
-        <nav className="hidden items-center gap-10 text-xs uppercase tracking-[0.25em] md:flex">
+        <nav className="hidden items-center gap-6 text-[18px] md:flex font-medium">
           {mainNavigation.map((item) => (
             <Link
               key={item.href}
@@ -44,9 +51,9 @@ export function Navbar() {
           <a
             href="https://wa.me/"
             aria-label="Contacto por WhatsApp"
-            className="text-xs transition-colors duration-200 hover:text-muted"
+            className="text-xs transition-colors duration-200 hover:text-muted text-[18px] font-medium"
           >
-            WA
+            Wa
           </a>
         </nav>
 

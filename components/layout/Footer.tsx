@@ -1,32 +1,54 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "./Container";
 import { mainNavigation } from "@/data/navigation";
 
 export function Footer() {
-  return (
-    <footer className="border-t border-border bg-background py-10 md:py-14">
-      <Container className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <div className="space-y-3">
-          <div className="text-xs font-semibold uppercase tracking-[0.35em]">
-            ARQ.O
-          </div>
-          <p className="max-w-xs text-sm text-muted">
-            Estudio de arquitectura contemporánea orientado al desarrollo
-            integral de proyectos que buscan trascender el tiempo.
-          </p>
-        </div>
+  const year = new Date().getFullYear();
+  const sections = mainNavigation.filter((item) => item.href !== "/");
 
-        <div className="grid gap-8 text-sm md:grid-cols-3">
-          <div>
-            <div className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-muted">
-              Navegación
+  return (
+    <footer className="bg-foreground text-background">
+      <div className="border-t border-border" />
+
+      <Container className="py-14">
+        <div className="grid gap-10 md:grid-cols-3 md:items-start">
+          <div className="space-y-4">
+            <div className="flex items-center">
+              <span className="relative h-24 w-24 shrink-0">
+                <Image
+                  src="/images/brand/logo-blanco.png"
+                  alt="Logo ARQ.O blanco"
+                  fill
+                  className="object-contain"
+                />
+              </span>
+              <span className="relative h-28 w-36 shrink-0 md:h-28 md:w-44">
+                <Image
+                  src="/images/brand/brand-blanco.png"
+                  alt="Brand ARQ.O blanco"
+                  fill
+                  className="object-contain"
+                />
+              </span>
             </div>
-            <ul className="space-y-1.5">
-              {mainNavigation.map((item) => (
+
+            <p className="max-w-xs text-sm leading-relaxed text-background/70">
+              Estudio de arquitectura contemporánea orientado al desarrollo
+              integral de proyectos que buscan trascender el tiempo.
+            </p>
+          </div>
+
+          <div className="md:border-l md:border-border md:pl-10">
+            <div className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
+              Secciones
+            </div>
+            <ul className="space-y-2 text-sm">
+              {sections.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="transition-colors duration-200 hover:text-muted"
+                    className="block text-background/80 transition-colors duration-200 hover:text-background"
                   >
                     {item.label}
                   </Link>
@@ -35,36 +57,23 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <div className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-muted">
+          <div className="md:border-l md:border-border md:pl-10">
+            <div className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
               Contacto
             </div>
-            <div className="space-y-1.5">
+
+            <div className="space-y-2 text-sm text-background/80">
               <p>info@arq-o.com</p>
               <p>+54 9 11 0000 0000</p>
-              <p className="text-muted">Buenos Aires, Argentina</p>
+              <p>Buenos Aires, Argentina</p>
             </div>
           </div>
+        </div>
 
-          <div>
-            <div className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-muted">
-              Redes
-            </div>
-            <div className="space-y-1.5">
-              <a
-                href="#"
-                className="block transition-colors duration-200 hover:text-muted"
-              >
-                Instagram
-              </a>
-              <a
-                href="#"
-                className="block transition-colors duration-200 hover:text-muted"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
+        <div className="mt-12 border-t border-border pt-6">
+          <p className="text-center text-xs text-background/60">
+            © {year} | ARQ.O
+          </p>
         </div>
       </Container>
     </footer>

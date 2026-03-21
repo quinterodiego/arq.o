@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
 import { FeaturedProjects } from "@/components/projects/FeaturedProjects";
-import { CTASection } from "@/components/ui/CTASection";
 import { ROUTES } from "@/lib/routes";
 import { HOME_IMAGES } from "@/lib/images";
+import { ServicesHomeSection } from "@/components/home/ServicesHomeSection";
+import { StudioHomeSection } from "@/components/home/StudioHomeSection";
+import { ContactHomeSection } from "@/components/home/ContactHomeSection";
 
 export default function HomePage() {
   return (
@@ -13,25 +14,19 @@ export default function HomePage() {
       <section className="border-b border-border bg-background py-16 md:py-24">
         <Container className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center">
           <div className="space-y-8">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-muted">
-              Estudio de arquitectura
+            <p className="text-[12px] uppercase tracking-[0.3em] text-gray-500">
+              ESTUDIO DE ARQUITECTURA
             </p>
-            <h1 className="text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
-              Arquitectura que trasciende el tiempo
+            <h1 className="text-3xl font-semibold tracking-tight md:text-[56px] lg:text-[56px] leading-[1.5]">
+              Arquitectura que trascende el tiempo
             </h1>
-            <p className="max-w-md text-sm leading-relaxed text-muted">
-              Diseñamos espacios contemporáneos con enfoque en funcionalidad,
-              contexto y permanencia. Cada proyecto es una respuesta precisa al
-              lugar, al programa y a las personas que lo habitan.
-            </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Button href={ROUTES.PROJECTS}>Ir a proyectos</Button>
               <Link
-                href={ROUTES.STUDIO}
-                className="text-xs uppercase tracking-[0.25em] text-muted transition-colors duration-200 hover:text-foreground"
+                href={ROUTES.PROJECTS}
+                className="inline-flex items-center justify-center border border-foreground bg-foreground px-4 py-2 text-[14px] uppercase tracking-[0.22em] text-background transition-colors duration-200 hover:bg-background hover:text-foreground"
               >
-                Conocé el estudio
+                EXPLORAR PROYECTOS
               </Link>
             </div>
           </div>
@@ -49,7 +44,9 @@ export default function HomePage() {
       </section>
 
       <FeaturedProjects />
-      <CTASection />
+      <ServicesHomeSection />
+      <StudioHomeSection />
+      <ContactHomeSection />
     </div>
   );
 }
