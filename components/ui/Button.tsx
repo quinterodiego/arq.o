@@ -19,13 +19,7 @@ type ButtonAsLink = BaseProps & {
 } & Omit<ButtonHTMLAttributes<HTMLAnchorElement>, "type">;
 
 export function Button(props: ButtonAsButton | ButtonAsLink) {
-  const {
-    variant = "primary",
-    children,
-    className,
-    href,
-    ...rest
-  } = props as ButtonAsButton & ButtonAsLink;
+  const { variant = "primary", children, className } = props;
 
   const baseClasses =
     "inline-flex items-center justify-center rounded-full border text-sm uppercase tracking-[0.2em] transition-colors duration-200 px-6 py-3";
@@ -37,16 +31,19 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
 
   const classes = `${baseClasses} ${variantClasses} ${className ?? ""}`;
 
-  if (href) {
+  if ("href" in props && props.href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={props.href} className={classes}>
         {children}
       </Link>
     );
   }
 
+  const { variant: _v, children: _c, className: _cn, ...rest } =
+    props as ButtonAsButton;
+
   return (
-    <button type="button" className={classes} {...(rest as ButtonAsButton)}>
+    <button type="button" className={classes} {...rest}>
       {children}
     </button>
   );
