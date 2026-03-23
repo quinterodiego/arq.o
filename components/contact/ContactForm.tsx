@@ -14,17 +14,17 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="rounded-2xl border border-border bg-[#f9f9f9] p-6">
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em]">
+          <p className="text-md font-semibold uppercase tracking-[0.25em]">
             Envíenos un mensaje
           </p>
-          <p className="text-sm leading-relaxed text-muted">
+          <p className="text-md leading-relaxed text-muted">
             Contanos sobre tu proyecto. Te respondemos a la brevedad.
           </p>
         </div>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="mt-6 grid gap-4">
           <div className="space-y-1.5">
-            <label className="text-[10px] uppercase tracking-[0.22em]" htmlFor="name">
+            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="name">
               Nombre y apellido
             </label>
             <input
@@ -38,7 +38,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] uppercase tracking-[0.22em]" htmlFor="email">
+            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="email">
               Email
             </label>
             <input
@@ -52,7 +52,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] uppercase tracking-[0.22em]" htmlFor="phone">
+            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="phone">
               Teléfono
             </label>
             <input
@@ -67,7 +67,7 @@ export function ContactForm() {
         </div>
 
         <div className="mt-4 space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.22em]" htmlFor="message">
+          <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="message">
             Mensaje
           </label>
           <textarea

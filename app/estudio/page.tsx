@@ -13,23 +13,17 @@ export default function StudioPage() {
           <SectionHeader
             eyebrow="Estudio"
             title="Estudio"
-            description="Estudio de Arq.O es una oficina profesional dedicada al desarrollo integral de proyectos de arquitectura, urbanismo y dirección de obras, orientada a brindar soluciones técnicas, funcionales y estéticas acordes a las necesidades específicas de cada comitente."
+            description=""
           />
 
           <section className="grid gap-10 border-t border-border pt-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
             <div className="space-y-4 text-sm leading-relaxed text-muted">
+              <h2 className="text-xl font-medium text-black">Nuetro enfoque</h2>
               <p>
-                El estudio se especializa en la planificación, diseño,
-                documentación técnica y ejecución de obras, abordando cada
-                proyecto mediante un proceso de trabajo que integra criterios de
-                eficiencia constructiva, optimización de recursos, calidad
-                espacial y cumplimiento de las normativas vigentes.
+                <b>Estudio de Arq.O</b> es una oficina profesional dedicada al desarrollo integral de proyectos de arquitectura, urbanismo y dirección de obras, orientada a brindar soluciones técnicas, funcionales y estéticas acordes a las necesidades específicas de cada comitente.
               </p>
               <p>
-                Nuestra metodología se basa en un análisis exhaustivo de cada
-                requerimiento, contemplando tanto las condiciones del entorno
-                como los aspectos técnicos, económicos y funcionales que
-                intervienen en el desarrollo de la obra.
+                El estudio se especializa en la <b>planificación, diseño, documentación técnica y ejecución de obras</b>, abordando cada proyecto mediante un proceso de trabajo que integra criterios de eficiencia constructiva, optimización de recursos, calidad espacial y cumplimiento de las normativas vigentes.
               </p>
             </div>
             <div className="relative h-56 overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-64">
@@ -44,22 +38,6 @@ export default function StudioPage() {
           </section>
 
           <section className="grid gap-10 border-t border-border pt-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-            <div className="space-y-4 text-sm leading-relaxed text-muted">
-              <h2 className="text-sm font-medium uppercase tracking-[0.24em]">
-                Metodología de trabajo
-              </h2>
-              <p>
-                A partir del análisis de cada proyecto se elaboran propuestas
-                arquitectónicas que buscan equilibrar innovación, viabilidad
-                constructiva y calidad de diseño.
-              </p>
-              <p>
-                Cada etapa del proceso se desarrolla con una planificación
-                técnica rigurosa que permite optimizar recursos, prever
-                soluciones constructivas adecuadas y garantizar la correcta
-                ejecución de la obra.
-              </p>
-            </div>
             <div className="relative h-56 overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-64">
               <Image
                 src={STUDIO_IMAGES.metodologia}
@@ -69,38 +47,57 @@ export default function StudioPage() {
                 sizes="(min-width: 1024px) 420px, 100vw"
               />
             </div>
+            <div className="space-y-4 text-sm leading-relaxed text-muted">
+              <h2 className="text-xl font-medium text-black">
+                Metodología de trabajo
+              </h2>
+              <p>
+                Nuestra metodología se basa en un <b>análisis exhaustivo de cada requerimiento</b>, contemplando tanto las condiciones del entorno como los aspectos técnicos, económicos y funcionales que intervienen en el desarrollo de la obra. A partir de ello se elaboran propuestas arquitectónicas que buscan equilibrar innovación, viabilidad constructiva y calidad de diseño.
+              </p>
+            </div>
           </section>
 
           <section className="grid gap-10 border-t border-border pt-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
             <div className="space-y-4 text-sm leading-relaxed text-muted">
-              <h2 className="text-sm font-medium uppercase tracking-[0.24em]">
+              <h2 className="text-xl font-medium text-black">
                 Experiencia
               </h2>
               <p>
-                El estudio cuenta con experiencia en el desarrollo de proyectos
-                de diversa escala y tipología, incluyendo obras
-                institucionales, educativas, comerciales, residenciales y
-                espacios públicos.
+                El estudio cuenta con experiencia en el desarrollo de proyectos de diversa escala y tipología, incluyendo obras institucionales, educativas, comerciales, residenciales y espacios públicos, participando en las distintas etapas del proceso constructivo:
               </p>
               <ExperienceList />
             </div>
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-64">
+              <Image
+                src={STUDIO_IMAGES.experiencia}
+                alt="Experiencia del estudio ARQ.O"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 420px, 100vw"
+              />
+            </div>
+          </section>
+
+          <section className="grid gap-10 border-t border-border pt-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-64">
+              <Image
+                src={STUDIO_IMAGES.objetivo}
+                alt="Objetivo del estudio ARQ.O"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 420px, 100vw"
+              />
+            </div>
             <div className="space-y-4 text-sm leading-relaxed text-muted">
-              <h2 className="text-sm font-medium uppercase tracking-[0.24em]">
+              <h2 className="text-xl font-medium text-black">
                 Nuestro objetivo
               </h2>
               <p>
-                Nuestro objetivo es garantizar soluciones arquitectónicas
-                integrales, asegurando el adecuado control técnico y la correcta
-                materialización de cada proyecto.
-              </p>
-              <p>
-                La práctica profesional del estudio se basa en la
-                responsabilidad técnica, la precisión en el desarrollo de cada
-                etapa del proyecto y el compromiso con la calidad de la obra
-                construida.
+                Nuestro objetivo es <b>garantizar soluciones arquitectónicas integrales</b>, asegurando el adecuado control técnico y la correcta materialización de cada proyecto, mediante una práctica profesional responsable, precisa y comprometida con la calidad de la obra construida.
               </p>
             </div>
           </section>
+
         </Container>
       </section>
 
@@ -108,4 +105,3 @@ export default function StudioPage() {
     </div>
   );
 }
-

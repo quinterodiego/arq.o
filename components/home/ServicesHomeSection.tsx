@@ -1,110 +1,30 @@
 import { Container } from "@/components/layout/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { services } from "@/data/services";
+import { faBarsStaggered, faHandshake, faCalculator, faFileLines, faBuilding } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ServiceIcon({ id }: { id: string }) {
   switch (id) {
     case "anteproyecto":
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-          <path
-            d="M7 3h10l2 2v16H7V3Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M9 9h6M9 13h6"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
+        <FontAwesomeIcon icon={faBarsStaggered} />
       );
     case "proyecto-ejecutivo":
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-          <path
-            d="M7 3h8l2 2v16H7V3Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M9 11h6M9 15h4"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M15 3v4h4"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <FontAwesomeIcon icon={faHandshake} />
       );
     case "computo-presupuesto":
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-          <path
-            d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <path
-            d="M8 8h8"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 15h.01M12 15h.01"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
+        <FontAwesomeIcon icon={faCalculator} />
       );
     case "documentacion-tecnica":
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-          <path
-            d="M4 7a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8 13h8M8 16h6"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
+        <FontAwesomeIcon icon={faFileLines} />
       );
     case "direccion-obra":
       return (
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-          <path
-            d="M3 21h18"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M6 21V10l6-6 6 6v11"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M10 21v-7h4v7"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <FontAwesomeIcon icon={faBuilding} />
       );
     default:
       return (
@@ -117,7 +37,7 @@ function ServiceIcon({ id }: { id: string }) {
 
 export function ServicesHomeSection() {
   return (
-    <section className="border-t border-border bg-background py-16 md:py-24">
+    <section id="servicios" className="scroll-mt-24 border-t border-border bg-background py-16 md:py-24">
       <Container className="space-y-12">
         <SectionHeader
           eyebrow="Servicios"

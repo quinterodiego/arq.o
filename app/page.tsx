@@ -17,7 +17,7 @@ export default function HomePage() {
             <p className="text-[12px] uppercase tracking-[0.3em] text-gray-500">
               ESTUDIO DE ARQUITECTURA
             </p>
-            <h1 className="text-3xl font-semibold tracking-tight md:text-[56px] lg:text-[56px] leading-[1.5]">
+            <h1 className="text-3xl font-bold tracking-tight md:text-[56px] lg:text-[56px] leading-[1.5]">
               Arquitectura que trascende el tiempo
             </h1>
 
@@ -31,7 +31,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative h-[260px] overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-[360px]">
+          <div className="relative h-[260px] overflow-hidden rounded-2xl border border-border bg-[#f5f5f5] md:h-[70vh] md:max-h-[700px]">
             <Image
               src={HOME_IMAGES.hero}
               alt="Visual de proyecto arquitectónico del estudio ARQ.O"

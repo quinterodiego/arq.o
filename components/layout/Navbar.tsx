@@ -5,6 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { mainNavigation } from "@/data/navigation";
 import { Container } from "./Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -50,10 +54,11 @@ export function Navbar() {
           ))}
           <a
             href="https://wa.me/"
+            target="_blank"
             aria-label="Contacto por WhatsApp"
-            className="text-xs transition-colors duration-200 hover:text-muted text-[18px] font-medium"
+            className="text-xs transition-colors duration-200 hover:text-[#28a71a] text-[18px] font-medium"
           >
-            Wa
+            <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
           </a>
         </nav>
 
@@ -65,7 +70,7 @@ export function Navbar() {
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
         >
-          {open ? "Cerrar" : "Menú"}
+          {open ? <FontAwesomeIcon icon={faXmark} className="text-2xl" /> : <FontAwesomeIcon icon={faBars} className="text-2xl" />}
         </button>
       </Container>
 
@@ -83,14 +88,14 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <a
+            {/* <a
               href="https://wa.me/"
               aria-label="Contacto por WhatsApp"
               className="py-1 text-[11px] transition-colors duration-200 hover:text-muted"
               onClick={() => setOpen(false)}
             >
               WhatsApp
-            </a>
+            </a> */}
           </Container>
         </div>
       )}

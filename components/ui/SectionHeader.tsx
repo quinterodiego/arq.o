@@ -18,11 +18,11 @@ export function SectionHeader({
 
   return (
     <div className={`flex flex-col gap-3 ${alignment}`}>
-      {eyebrow ? (
+      {/* {eyebrow ? (
         <span className="text-[11px] uppercase tracking-[0.3em] text-muted">
           {eyebrow}
         </span>
-      ) : null}
+      ) : null} */}
       <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
         {title}
       </h2>

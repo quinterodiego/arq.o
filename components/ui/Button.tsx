@@ -22,7 +22,7 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
   const { variant = "primary", children, className } = props;
 
   const baseClasses =
-    "inline-flex items-center justify-center rounded-full border text-sm uppercase tracking-[0.2em] transition-colors duration-200 px-6 py-3";
+    "inline-flex items-center justify-center border text-sm uppercase tracking-[0.2em] transition-colors duration-200 px-6 py-3";
 
   const variantClasses =
     variant === "primary"

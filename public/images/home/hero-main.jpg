@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
-  <rect width="1600" height="1000" fill="#f4f4f4"/>
-  <rect x="120" y="160" width="1360" height="680" fill="#e0e0e0"/>
-  <path d="M120 720 L520 360 L920 640 L1240 400 L1480 640" fill="none" stroke="#c0c0c0" stroke-width="2"/>
-  <text x="140" y="220" fill="#999" font-family="system-ui, -apple-system, BlinkMacSystemFont" font-size="20" letter-spacing="6">
-    ARQ.O HERO PLACEHOLDER
-  </text>
-</svg>

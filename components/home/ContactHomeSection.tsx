@@ -2,6 +2,8 @@ import { Container } from "@/components/layout/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { faEnvelope, faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ContactIcon({ type }: { type: "mail" | "phone" | "pin" }) {
   switch (type) {
@@ -56,68 +58,22 @@ function ContactIcon({ type }: { type: "mail" | "phone" | "pin" }) {
 
 export function ContactHomeSection() {
   return (
-    <section className="border-t border-border bg-background py-16 md:py-24">
+    <section id="contacto" className="scroll-mt-24 border-t border-border bg-background py-16 md:py-24">
       <Container className="space-y-12">
-        <SectionHeader
-          eyebrow="Contacto"
-          title="Contacto"
-          description="Si tenés un proyecto en mente o querés conversar sobre una posible colaboración, escribinos y coordinamos una reunión."
-        />
-
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
-          <div className="space-y-6 text-sm leading-relaxed text-muted">
-            <div className="space-y-3">
-              <h2 className="text-xs font-medium uppercase tracking-[0.24em] text-foreground">
-                Datos de contacto
-              </h2>
-
-              <div className="mt-3 space-y-3">
-                <div className="flex items-start gap-3">
-                  <span className="mt-0.5 text-foreground">
-                    <ContactIcon type="mail" />
-                  </span>
-                  <p className="text-muted">info@arq-o.com</p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="mt-0.5 text-foreground">
-                    <ContactIcon type="phone" />
-                  </span>
-                  <p className="text-muted">+54 9 11 0000 0000</p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="mt-0.5 text-foreground">
-                    <ContactIcon type="pin" />
-                  </span>
-                  <p className="text-muted">Buenos Aires, Argentina</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-4">
-              <h2 className="text-xs font-medium uppercase tracking-[0.24em] text-foreground">
-                WhatsApp
-              </h2>
-              <p className="mt-3 text-muted">
-                Si preferís una conversación directa, podés escribirnos por
-                WhatsApp.
-              </p>
-
-              <div className="mt-4">
-                <Button
-                  href="https://wa.me/"
-                  variant="primary"
-                  className="rounded-none text-[10px]"
-                >
-                  Escribir por WhatsApp
-                </Button>
-              </div>
-            </div>
+        <section className="grid gap-10 md:grid-cols-2">
+          <div className="space-y-4 text-lg col-span-1">
+            <SectionHeader
+              eyebrow="Contacto"
+              title="Contacto"
+              description="¿Tenés  un proyecto en mente? Contanos tu idea y evaluaremos juntos la mejor manera de llevarla a cabo."
+            />
+            <hr />
+            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Buenos Aires, Argentina</p>
+            <p><FontAwesomeIcon icon={faEnvelope} /> info@arq-o.com</p>
+            <p><FontAwesomeIcon icon={faPhone} /> +54 9 11 0000 0000</p>
           </div>
-
           <ContactForm />
-        </div>
+        </section>
       </Container>
     </section>
   );

@@ -50,68 +50,37 @@ export const projects: Project[] = [
     };
   })(),
   (() => {
-    const images = getProjectImages("torre-central");
+    const images = getProjectImages("garibaldis-grill");
     return {
-      slug: "torre-central",
-      title: "Torre Central",
-      category: "Vivienda familiar",
+      slug: "garibaldis-grill",
+      title: "Garibaldi's Grill",
+      category: "Restaurante",
       location: "Buenos Aires",
-      year: 2022,
-      area: "2.400 m²",
+      year: 2021,
+      area: "150 m²",
       coverImage: images.cover,
       thumbnail: images.thumbnail,
       gallery: images.gallery,
       description:
-        "Edificio residencial concebido a partir de la luz natural, la ventilación cruzada y la flexibilidad de planta, asegurando unidades funcionales y eficientes en su uso cotidiano.",
+        "Restaurante en Garibaldi, Buenos Aires, Argentina. 2021. 150 m². Restaurante.",
       featured: true
     };
   })(),
   (() => {
-    const images = getProjectImages("casa-delta");
+    const images = getProjectImages("vivienda-ramirez");
     return {
-      slug: "casa-delta",
-      title: "Casa Delta",
-      category: "Vivienda contemporánea",
-      location: "Tigre",
-      year: 2021,
-      area: "320 m²",
-      coverImage: images.cover,
-      thumbnail: images.thumbnail,
-      gallery: images.gallery,
-      description:
-        "Vivienda entre canales que incorpora la topografía y el paisaje como parte activa del proyecto, priorizando visuales abiertas y espacios de transición interior-exterior."
-    };
-  })(),
-  (() => {
-    const images = getProjectImages("oficinas-atlas");
-    return {
-      slug: "oficinas-atlas",
-      title: "Oficinas Atlas",
-      category: "Espacio corporativo",
+      slug: "vivienda-ramirez",
+      title: "Vivienda en Ramírez",
+      category: "Vivienda familiar",
       location: "Buenos Aires",
-      year: 2020,
-      area: "780 m²",
+      year: 2022,
+      area: "100 m²",
       coverImage: images.cover,
       thumbnail: images.thumbnail,
       gallery: images.gallery,
       description:
-        "Reconfiguración integral de planta libre para oficinas corporativas, con énfasis en confort acústico, iluminación eficiente y flexibilidad programática."
-    };
-  })(),
-  (() => {
-    const images = getProjectImages("plaza-urbana-sur");
-    return {
-      slug: "plaza-urbana-sur",
-      title: "Plaza Urbana Sur",
-      category: "Espacio público",
-      location: "Buenos Aires",
-      year: 2019,
-      area: "5.200 m²",
-      coverImage: images.cover,
-      thumbnail: images.thumbnail,
-      gallery: images.gallery,
-      description:
-        "Proyecto de espacio público que articula áreas verdes, sectores de descanso y equipamiento urbano, promoviendo la integración social y el uso intensivo del espacio abierto."
+        "Vivienda en Ramírez, Buenos Aires, Argentina. 2022. 100 m². Vivienda familiar.",
+      featured: true
     };
   })()
 ];
