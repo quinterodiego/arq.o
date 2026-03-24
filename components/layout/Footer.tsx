@@ -1,19 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "./Container";
 import { mainNavigation } from "@/data/navigation";
+import {
+  staggerContainerVariants,
+  staggerItemVariants,
+  VIEWPORT_DEFAULT
+} from "@/lib/motion/presets";
 
 export function Footer() {
   const year = new Date().getFullYear();
   const sections = mainNavigation.filter((item) => item.href !== "/");
+  const reduced = useReducedMotion();
 
   return (
     <footer className="bg-foreground text-background">
       <div className="border-t border-border" />
 
       <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-3 md:items-start">
-          <div className="space-y-4">
+        <motion.div
+          className="grid gap-10 md:grid-cols-3 md:items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT_DEFAULT}
+          variants={staggerContainerVariants(Boolean(reduced))}
+        >
+          <motion.div
+            className="space-y-4"
+            variants={staggerItemVariants(Boolean(reduced))}
+          >
             <div className="flex items-center">
               <span className="relative h-24 w-24 shrink-0">
                 <Image
@@ -37,9 +55,12 @@ export function Footer() {
               Estudio de arquitectura contemporánea orientado al desarrollo
               integral de proyectos que buscan trascender el tiempo.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="md:border-l md:border-border md:pl-10">
+          <motion.div
+            className="md:border-l md:border-border md:pl-10"
+            variants={staggerItemVariants(Boolean(reduced))}
+          >
             <div className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
               Secciones
             </div>
@@ -48,16 +69,23 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block text-background/80 transition-colors duration-200 hover:text-background"
+                    className="group relative inline-block text-background/80 transition-colors duration-300 ease-out hover:text-background"
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    <span
+                      className="pointer-events-none absolute -bottom-0.5 left-0 h-px w-0 bg-current opacity-50 transition-[width] duration-300 ease-out group-hover:w-full"
+                      aria-hidden
+                    />
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="md:border-l md:border-border md:pl-10">
+          <motion.div
+            className="md:border-l md:border-border md:pl-10"
+            variants={staggerItemVariants(Boolean(reduced))}
+          >
             <div className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-background/90">
               Contacto
             </div>
@@ -67,16 +95,21 @@ export function Footer() {
               <p>+54 9 11 0000 0000</p>
               <p>Buenos Aires, Argentina</p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="mt-12 border-t border-border pt-6">
+        <motion.div
+          className="mt-12 border-t border-border pt-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT_DEFAULT}
+          variants={staggerItemVariants(Boolean(reduced))}
+        >
           <p className="text-center text-xs text-background/60">
             © {year} | ARQ.O
           </p>
-        </div>
+        </motion.div>
       </Container>
     </footer>
   );
 }
-

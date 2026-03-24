@@ -6,6 +6,7 @@ import { ProjectMeta } from "@/components/projects/ProjectMeta";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { Button } from "@/components/ui/Button";
 import { ROUTES } from "@/lib/routes";
+import { Reveal } from "@/components/motion/Reveal";
 
 type ProjectPageProps = {
   params: {
@@ -30,28 +31,35 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="border-t border-border bg-background py-12 md:py-16">
       <Container className="space-y-10">
-        <Breadcrumb
-          items={[
-            { label: "Proyectos", href: ROUTES.PROJECTS },
-            { label: project.title }
-          ]}
-        />
+        <Reveal>
+          <div className="space-y-4">
+            <Breadcrumb
+              items={[
+                { label: "Proyectos", href: ROUTES.PROJECTS },
+                { label: project.title }
+              ]}
+            />
 
-        <header className="space-y-4">
-          <p className="text-[11px] uppercase tracking-[0.28em] text-muted">
-            {project.category}
-          </p>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <h1 className="text-2xl font-medium tracking-tight md:text-3xl">
-              {project.title}
-            </h1>
-            <ProjectMeta project={project} />
+            <header className="space-y-4">
+              <p className="text-[11px] uppercase tracking-[0.28em] text-muted">
+                {project.category}
+              </p>
+              <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <h1 className="text-2xl font-medium tracking-tight md:text-3xl">
+                  {project.title}
+                </h1>
+                <ProjectMeta project={project} />
+              </div>
+            </header>
           </div>
-        </header>
+        </Reveal>
 
-        <ProjectGallery images={project.gallery} title={project.title} />
+        <Reveal delay={0.06}>
+          <ProjectGallery images={project.gallery} title={project.title} />
+        </Reveal>
 
-        <section className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+        <Reveal delay={0.08}>
+          <section className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div className="space-y-4 text-sm leading-relaxed text-muted">
             <p>{project.description}</p>
           </div>
@@ -82,19 +90,22 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
         </section>
+        </Reveal>
 
-        <div className="flex flex-col items-start justify-between gap-4 border-t border-border pt-8 md:flex-row md:items-center">
-          <div className="flex flex-wrap gap-4">
-            <Button href={ROUTES.PROJECTS} variant="ghost">
-              Volver a proyectos
-            </Button>
-            {next && (
-              <Button href={`/proyectos/${next.slug}`} variant="primary">
-                Siguiente proyecto
+        <Reveal delay={0.1}>
+          <div className="flex flex-col items-start justify-between gap-4 border-t border-border pt-8 md:flex-row md:items-center">
+            <div className="flex flex-wrap gap-4">
+              <Button href={ROUTES.PROJECTS} variant="ghost">
+                Volver a proyectos
               </Button>
-            )}
+              {next && (
+                <Button href={`/proyectos/${next.slug}`} variant="primary">
+                  Siguiente proyecto
+                </Button>
+              )}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </div>
   );

@@ -9,6 +9,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
+function NavTextLink({
+  href,
+  children,
+  onClick,
+  className = ""
+}: {
+  href: string;
+  children: string;
+  onClick?: () => void;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`group relative inline-flex py-1 text-inherit outline-none transition-colors duration-300 ease-out hover:text-muted ${className}`}
+    >
+      <span className="relative">
+        {children}
+        <span
+          className="pointer-events-none absolute -bottom-0.5 left-0 h-px w-0 bg-current opacity-35 transition-[width,opacity] duration-300 ease-out group-hover:w-full group-hover:opacity-100"
+          aria-hidden
+        />
+      </span>
+    </Link>
+  );
+}
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,28 +68,29 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Navegación desktop */}
-        <nav className="hidden items-center gap-6 text-[18px] md:flex font-medium">
+        <nav className="hidden items-center gap-6 text-[18px] font-medium md:flex">
           {mainNavigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="transition-colors duration-200 hover:text-muted"
-            >
+            <NavTextLink key={item.href} href={item.href}>
               {item.label}
-            </Link>
+            </NavTextLink>
           ))}
           <a
             href="https://wa.me/"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Contacto por WhatsApp"
-            className="text-xs transition-colors duration-200 hover:text-[#28a71a] text-[18px] font-medium"
+            className="group relative inline-flex py-1 text-[18px] font-medium text-inherit transition-colors duration-300 ease-out hover:text-[#28a71a]"
           >
-            <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
+            <span className="relative">
+              <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
+              <span
+                className="pointer-events-none absolute -bottom-1 left-0 h-px w-0 bg-[#28a71a] opacity-60 transition-[width] duration-300 ease-out group-hover:w-full"
+                aria-hidden
+              />
+            </span>
           </a>
         </nav>
 
-        {/* Botón menú mobile */}
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-full border border-border px-3 py-2 text-[10px] uppercase tracking-[0.2em] md:hidden"
@@ -70,36 +98,29 @@ export function Navbar() {
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
         >
-          {open ? <FontAwesomeIcon icon={faXmark} className="text-2xl" /> : <FontAwesomeIcon icon={faBars} className="text-2xl" />}
+          {open ? (
+            <FontAwesomeIcon icon={faXmark} className="text-2xl" />
+          ) : (
+            <FontAwesomeIcon icon={faBars} className="text-2xl" />
+          )}
         </button>
       </Container>
 
-      {/* Menú mobile desplegable */}
       {open && (
         <div className="border-t border-border bg-background/95 md:hidden">
           <Container className="flex flex-col gap-3 py-4 text-xs uppercase tracking-[0.24em]">
             {mainNavigation.map((item) => (
-              <Link
+              <NavTextLink
                 key={item.href}
                 href={item.href}
-                className="py-1 transition-colors duration-200 hover:text-muted"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </Link>
+              </NavTextLink>
             ))}
-            {/* <a
-              href="https://wa.me/"
-              aria-label="Contacto por WhatsApp"
-              className="py-1 text-[11px] transition-colors duration-200 hover:text-muted"
-              onClick={() => setOpen(false)}
-            >
-              WhatsApp
-            </a> */}
           </Container>
         </div>
       )}
     </header>
   );
 }
-
