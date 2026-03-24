@@ -27,14 +27,24 @@ export function revealVariants(delay = 0, reduced?: boolean): Variants {
   };
 }
 
-/** Stagger entre ítems: 0.08–0.12 s (valor medio 0.1) */
-export function staggerContainerVariants(reduced?: boolean): Variants {
+type StaggerOptions = {
+  staggerChildren?: number;
+  delayChildren?: number;
+};
+
+/** Stagger entre ítems: por defecto ~0.1 s; se puede afinar por sección */
+export function staggerContainerVariants(
+  reduced?: boolean,
+  options?: StaggerOptions
+): Variants {
+  const stagger = options?.staggerChildren ?? 0.1;
+  const delayChild = options?.delayChildren ?? 0.04;
   return {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: reduced ? 0 : 0.1,
-        delayChildren: reduced ? 0 : 0.04
+        staggerChildren: reduced ? 0 : stagger,
+        delayChildren: reduced ? 0 : delayChild
       }
     }
   };

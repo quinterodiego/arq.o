@@ -4,6 +4,8 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "./Button";
 import { ROUTES } from "@/lib/routes";
 import { Reveal } from "@/components/motion/Reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export function CTASection() {
   return (
@@ -23,8 +25,8 @@ export function CTASection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <Button href={ROUTES.CONTACT} variant="primary">
-            Contáctanos
+          <Button href={ROUTES.CONTACT} variant="primary" className="rounded-none px-4 py-2 text-[10px]">
+            Contáctanos <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
           </Button>
         </Reveal>
       </Container>

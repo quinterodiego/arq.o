@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/Button";
 import { ROUTES } from "@/lib/routes";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerContainer, StaggerItem } from "@/components/motion/Stagger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export function FeaturedProjects() {
   const featured = getFeaturedProjects();
@@ -38,7 +40,7 @@ export function FeaturedProjects() {
             href={ROUTES.PROJECTS}
             className="rounded-none px-4 py-2 text-[14px] md:text-[14px]"
           >
-            Ver proyectos
+            Ver proyectos <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
           </Button>
         </Reveal>
       </Container>

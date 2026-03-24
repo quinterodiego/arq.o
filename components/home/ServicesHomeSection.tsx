@@ -50,10 +50,15 @@ export function ServicesHomeSection() {
           />
         </Reveal>
 
-        <StaggerContainer className="grid gap-10 sm:grid-cols-2 md:grid-cols-5">
+        <StaggerContainer
+          className="grid gap-10 sm:grid-cols-2 md:grid-cols-5"
+          staggerChildren={0.14}
+          delayChildren={0.06}
+          amount={0.12}
+        >
           {services.map((service) => (
-            <StaggerItem key={service.id} className="contents">
-              <article className="space-y-3 text-sm leading-relaxed">
+            <StaggerItem key={service.id} className="min-w-0">
+              <article className="h-full space-y-3 text-sm leading-relaxed">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-[#f9f9f9] text-foreground">
                     <ServiceIcon id={service.id} />

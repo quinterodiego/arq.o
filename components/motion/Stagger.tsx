@@ -12,12 +12,17 @@ type StaggerContainerProps = {
   className?: string;
   /** `amount` del viewport; por defecto 0.15 para grids largos */
   amount?: number;
+  /** Segundos entre cada hijo (p. ej. servicios: ~0.12–0.14 para lectura “de a uno”) */
+  staggerChildren?: number;
+  delayChildren?: number;
 };
 
 export function StaggerContainer({
   children,
   className,
-  amount = 0.15
+  amount = 0.15,
+  staggerChildren,
+  delayChildren
 }: StaggerContainerProps) {
   const reduced = useReducedMotion();
 
@@ -27,7 +32,10 @@ export function StaggerContainer({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount }}
-      variants={staggerContainerVariants(Boolean(reduced))}
+      variants={staggerContainerVariants(Boolean(reduced), {
+        staggerChildren,
+        delayChildren
+      })}
     >
       {children}
     </motion.div>

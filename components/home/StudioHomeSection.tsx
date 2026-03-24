@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/Button";
 import { STUDIO_IMAGES } from "@/lib/images";
 import { ROUTES } from "@/lib/routes";
 import { Reveal } from "@/components/motion/Reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export function StudioHomeSection() {
   return (
@@ -39,7 +41,7 @@ export function StudioHomeSection() {
                 variant="primary"
                 className="rounded-none px-4 py-2 text-[10px]"
               >
-                Conoce el estudio
+                Conoce el estudio <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
               </Button>
             </div>
           </Reveal>

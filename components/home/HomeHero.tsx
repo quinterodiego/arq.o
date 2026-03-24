@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 import { ROUTES } from "@/lib/routes";
 import { HOME_IMAGES } from "@/lib/images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export function HomeHero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,7 +64,7 @@ export function HomeHero() {
               variant="primary"
               className="rounded-none px-4 py-2 text-[14px] uppercase tracking-[0.22em]"
             >
-              EXPLORAR PROYECTOS
+              EXPLORAR PROYECTOS <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
             </Button>
           </Reveal>
         </div>
