@@ -53,7 +53,7 @@ export function HomeHero() {
           </Reveal>
           <Reveal delay={0.08}>
             <h1 className="text-3xl font-bold leading-[1.5] tracking-tight md:text-[56px] lg:text-[56px]">
-              Arquitectura que trascende el tiempo
+              Arquitectura que trasciende el tiempo
             </h1>
           </Reveal>
           <Reveal delay={0.14} className="flex flex-wrap items-center gap-4">
