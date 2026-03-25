@@ -7,8 +7,8 @@ type ProjectMetaProps = {
 
 export function ProjectMeta({ project }: ProjectMetaProps) {
   return (
-    <p className="text-xs uppercase tracking-[0.22em] text-muted">
-      {formatProjectMeta(project)}
+    <p className="text-sm font-medium uppercase tracking-[0.22em] text-gray-500">
+      {project.location} · {project.year} · {project.area}
     </p>
   );
 }

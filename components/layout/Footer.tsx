@@ -10,6 +10,8 @@ import {
   staggerItemVariants,
   VIEWPORT_DEFAULT
 } from "@/lib/motion/presets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -34,7 +36,7 @@ export function Footer() {
           >
             <div className="flex items-center">
               <span className="relative h-24 w-24 shrink-0">
-                <Image
+                <Image sizes="(min-width: 768px) 40px, 32px"
                   src="/images/brand/logo-blanco.png"
                   alt="Logo ARQ.O blanco"
                   fill
@@ -42,7 +44,7 @@ export function Footer() {
                 />
               </span>
               <span className="relative h-28 w-36 shrink-0 md:h-28 md:w-44">
-                <Image
+                <Image sizes="(min-width: 768px) 40px, 32px"
                   src="/images/brand/brand-blanco.png"
                   alt="Brand ARQ.O blanco"
                   fill
@@ -69,7 +71,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="group relative inline-block text-background/80 transition-colors duration-300 ease-out hover:text-background"
+                    className="group relative inline-block text-background/80 tracking-[0.22em] text-sm tracking-tight transition-colors duration-300 ease-out hover:text-background"
                   >
                     <span>{item.label}</span>
                     <span
@@ -90,10 +92,16 @@ export function Footer() {
               Contacto
             </div>
 
-            <div className="space-y-2 text-sm text-background/80">
-              <p>info@arq-o.com</p>
-              <p>+54 9 11 0000 0000</p>
-              <p>Buenos Aires, Argentina</p>
+            <div className="space-y-2 text-sm text-background/80 font-medium tracking-tight md:text-base flex flex-col gap-2 cursor-pointer">
+              <p className="flex items-center gap-2 hover:text-background/90">
+                <FontAwesomeIcon icon={faEnvelope} /> <span>info@arq-o.com</span>
+              </p>
+              <p className="flex items-center gap-2 hover:text-background/90">
+                <FontAwesomeIcon icon={faPhone} /> <span>+54 9 11 0000 0000</span>
+              </p>
+              <p className="flex items-center gap-2 hover:text-background/90">
+                <FontAwesomeIcon icon={faMapMarkerAlt} /> <span className="cursor-pointer" onClick={() => window.open("https://maps.app.goo.gl/1234567890", "_blank")}>Buenos Aires, Argentina</span>
+              </p>
             </div>
           </motion.div>
         </motion.div>

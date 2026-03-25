@@ -68,7 +68,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-[18px] font-medium md:flex">
+        <nav className="hidden items-center gap-6 text-[14px] font-medium tracking-[0.2em] md:flex">
           {mainNavigation.map((item) => (
             <NavTextLink key={item.href} href={item.href}>
               {item.label}
@@ -79,10 +79,10 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contacto por WhatsApp"
-            className="group relative inline-flex py-1 text-[18px] font-medium text-inherit transition-colors duration-300 ease-out hover:text-[#28a71a]"
+            className="group relative inline-flex py-1 text-[10px] tracking-[0.2em] text-inherit transition-colors duration-300 ease-out hover:text-[#28a71a]"
           >
             <span className="relative">
-              <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
+              <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
               <span
                 className="pointer-events-none absolute -bottom-1 left-0 h-px w-0 bg-[#28a71a] opacity-60 transition-[width] duration-300 ease-out group-hover:w-full"
                 aria-hidden

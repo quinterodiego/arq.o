@@ -26,14 +26,14 @@ export function ContactHomeSection() {
               description="¿Tenés  un proyecto en mente? Contanos tu idea y evaluaremos juntos la mejor manera de llevarla a cabo."
             />
             <hr />
-            <p>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> Buenos Aires, Argentina
+            <p className="text-gray-500 tracking-tight md:text-base">
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> <span className="cursor-pointer">Buenos Aires, Argentina</span>
             </p>
-            <p>
+            <p className="text-gray-500 tracking-tight md:text-base">
               <FontAwesomeIcon icon={faEnvelope} /> info@arq-o.com
             </p>
-            <p>
-              <FontAwesomeIcon icon={faPhone} /> +54 9 11 0000 0000
+            <p className="text-gray-500 tracking-tight md:text-base" onClick={() => window.open("tel:+5491100000000", "_blank")}>
+              <FontAwesomeIcon icon={faPhone} /> <span className="cursor-pointer">+54 9 11 0000 0000</span>
             </p>
           </Reveal>
           <Reveal delay={0.08}>

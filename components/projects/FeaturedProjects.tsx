@@ -38,9 +38,9 @@ export function FeaturedProjects() {
           <Button
             variant="primary"
             href={ROUTES.PROJECTS}
-            className="rounded-none px-4 py-2 text-[14px] md:text-[14px]"
+            className="rounded-none px-4 py-2 text-[14px] uppercase tracking-[0.22em]"
           >
-            Ver proyectos <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
+            Ver proyectos <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span> 
           </Button>
         </Reveal>
       </Container>

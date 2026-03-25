@@ -49,12 +49,12 @@ export function HomeHero() {
       <Container className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center">
         <div className="space-y-8">
           <Reveal delay={0}>
-            <p className="text-[12px] uppercase tracking-[0.3em] text-gray-500">
+            <p className="text-[12px] font-medium uppercase tracking-[0.3em] text-gray-500">
               ESTUDIO DE ARQUITECTURA
             </p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="text-3xl font-bold leading-[1.5] tracking-tight md:text-[56px] lg:text-[56px]">
+            <h1 className="text-3xl font-medium leading-[1.5] tracking-tight md:text-[56px] lg:text-[56px]">
               Arquitectura que trasciende el tiempo
             </h1>
           </Reveal>

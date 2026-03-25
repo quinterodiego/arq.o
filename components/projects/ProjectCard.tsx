@@ -26,16 +26,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-col gap-1 transition-[opacity] duration-300 ease-out group-hover:opacity-90">
-        <p className="text-[11px] uppercase tracking-[0.28em] text-muted transition-colors duration-300 group-hover:text-foreground/65">
+        <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-gray-500 transition-colors duration-300 group-hover:text-foreground/65">
           {project.category}
         </p>
-        <h3 className="text-base font-medium tracking-tight transition-colors duration-300 group-hover:text-foreground/90">
-          {project.title}
-        </h3>
-        <div className="transition-opacity duration-300 group-hover:opacity-[0.88]">
-          <ProjectMeta project={project} />
-        </div>
+        <h3 className="text-base font-medium leading-[1.5] text-foreground tracking-tight transition-colors duration-300 group-hover:text-foreground/90">
+        {project.title}
+      </h3>
+      <div className="transition-opacity duration-300 group-hover:opacity-[0.88]">
+        <ProjectMeta project={project} />
       </div>
-    </Link>
-  );
+    </div>
+  </Link>
+);
 }

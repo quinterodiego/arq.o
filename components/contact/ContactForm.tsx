@@ -1,5 +1,7 @@
 "use client";
 
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 export function ContactForm() {
@@ -14,17 +16,17 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="rounded-2xl border border-border bg-[#f9f9f9] p-6">
         <div className="space-y-2">
-          <p className="text-md font-semibold uppercase tracking-[0.25em]">
+          <p className="text-md font-medium uppercase tracking-[0.25em] text-foreground">
             Envíenos un mensaje
           </p>
-          <p className="text-md leading-relaxed text-muted">
+          {/* <p className="text-md leading-relaxed text-gray-500 tracking-tight md:text-base">
             Contanos sobre tu proyecto. Te respondemos a la brevedad.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-6 grid gap-4">
           <div className="space-y-1.5">
-            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="name">
+            <label className="text-[12px] font-medium uppercase tracking-[0.22em] text-gray-500" htmlFor="name">
               Nombre y apellido
             </label>
             <input
@@ -38,7 +40,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="email">
+            <label className="text-[12px] font-medium uppercase tracking-[0.22em] text-gray-500" htmlFor="email">
               Email
             </label>
             <input
@@ -52,7 +54,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="phone">
+            <label className="text-[12px] font-medium uppercase tracking-[0.22em] text-gray-500" htmlFor="phone">
               Teléfono
             </label>
             <input
@@ -67,7 +69,7 @@ export function ContactForm() {
         </div>
 
         <div className="mt-4 space-y-1.5">
-          <label className="text-[12px] uppercase tracking-[0.22em]" htmlFor="message">
+          <label className="text-[12px] font-medium uppercase tracking-[0.22em] text-gray-500" htmlFor="message">
             Mensaje
           </label>
           <textarea
@@ -83,19 +85,12 @@ export function ContactForm() {
         <div className="mt-6">
           <button
             type="submit"
-            className="w-full border border-foreground bg-foreground px-6 py-3 text-xs uppercase tracking-[0.25em] text-background transition-colors duration-200 hover:bg-background hover:text-foreground"
+            className="w-full border border-foreground bg-foreground px-6 py-3 text-[14px] uppercase tracking-[0.25em] text-background transition-colors duration-200 hover:bg-background hover:text-foreground flex items-center justify-center gap-2 rounded-none cursor-pointer"
           >
-            Enviar mensaje
-          </button>
+            Enviar mensaje <span className="ml-2"><FontAwesomeIcon icon={ faChevronRight } /></span> 
+          </button> 
         </div>
       </div>
-
-      {status === "submitted" && (
-        <p className="text-xs text-muted">
-          El formulario es demostrativo. Podés reemplazar este comportamiento por un envío real más adelante.
-        </p>
-      )}
     </form>
   );
 }
-

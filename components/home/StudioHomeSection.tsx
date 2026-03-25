@@ -24,12 +24,12 @@ export function StudioHomeSection() {
 
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center">
           <Reveal delay={0.06} className="space-y-6 text-sm leading-relaxed text-muted">
-            <p>
+            <p className="text-gray-500 tracking-tight md:text-base">
               Trabajamos cada encargo integrando criterios de eficiencia
               constructiva, calidad espacial y cumplimiento de normativas
               vigentes.
             </p>
-            <p>
+            <p className="text-gray-500 tracking-tight md:text-base">
               Nuestro proceso acompaña desde el análisis inicial hasta la
               materialización de la obra, con precisión técnica y atención al
               detalle.
@@ -39,9 +39,9 @@ export function StudioHomeSection() {
               <Button
                 href={ROUTES.STUDIO}
                 variant="primary"
-                className="rounded-none px-4 py-2 text-[10px]"
+                className="rounded-none px-4 py-2 text-[14px] uppercase tracking-[0.22em]"
               >
-                Conoce el estudio <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span>
+                Conoce el estudio <span className="ml-2"><FontAwesomeIcon icon={faChevronRight} /></span> 
               </Button>
             </div>
           </Reveal>

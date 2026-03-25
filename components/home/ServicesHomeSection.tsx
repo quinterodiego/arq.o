@@ -60,14 +60,14 @@ export function ServicesHomeSection() {
             <StaggerItem key={service.id} className="min-w-0">
               <article className="h-full space-y-3 text-sm leading-relaxed">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-[#f9f9f9] text-foreground">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-[#f9f9f9] text-foreground text-[24px] tracking-[0.2em]">
                     <ServiceIcon id={service.id} />
                   </span>
                 </div>
-                <h3 className="text-xs font-medium uppercase tracking-[0.22em]">
+                <h3 className="text-sm font-medium uppercase tracking-[0.22em] text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-xs text-muted">{service.description}</p>
+                <p className="text-xs text-gray-500 tracking-tight md:text-sm">{service.description}</p>
               </article>
             </StaggerItem>
           ))}
