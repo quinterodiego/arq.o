@@ -30,7 +30,7 @@ export function ExperienceList() {
         <motion.li
           key={item}
           variants={staggerItemVariants(Boolean(reduced))}
-          className="flex items-center justify-between border-b border-border py-2 text-muted"
+          className="flex items-center justify-between border-b border-border py-2 text-gray-500 tracking-tight md:text-base"
         >
           <span>{item}</span>
         </motion.li>

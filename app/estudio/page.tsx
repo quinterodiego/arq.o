@@ -18,11 +18,11 @@ export default function StudioPage() {
           <Reveal delay={0.06}>
             <section className="grid gap-10 border-t border-border pt-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
               <div className="space-y-4 text-sm leading-relaxed text-muted">
-                <h2 className="text-xl font-medium text-black">Nuetro enfoque</h2>
-                <p>
+                <h2 className="text-xl font-medium text-black">Nuestro enfoque</h2>
+                <p className="text-gray-500 tracking-tight md:text-base">
                   <b>Estudio de Arq.O</b> es una oficina profesional dedicada al desarrollo integral de proyectos de arquitectura, urbanismo y dirección de obras, orientada a brindar soluciones técnicas, funcionales y estéticas acordes a las necesidades específicas de cada comitente.
                 </p>
-                <p>
+                <p className="text-gray-500 tracking-tight md:text-base">
                   El estudio se especializa en la <b>planificación, diseño, documentación técnica y ejecución de obras</b>, abordando cada proyecto mediante un proceso de trabajo que integra criterios de eficiencia constructiva, optimización de recursos, calidad espacial y cumplimiento de las normativas vigentes.
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function StudioPage() {
                 <h2 className="text-xl font-medium text-black">
                   Metodología de trabajo
                 </h2>
-                <p>
+                <p className="text-gray-500 tracking-tight md:text-base">
                   Nuestra metodología se basa en un <b>análisis exhaustivo de cada requerimiento</b>, contemplando tanto las condiciones del entorno como los aspectos técnicos, económicos y funcionales que intervienen en el desarrollo de la obra. A partir de ello se elaboran propuestas arquitectónicas que buscan equilibrar innovación, viabilidad constructiva y calidad de diseño.
                 </p>
               </div>
@@ -66,7 +66,7 @@ export default function StudioPage() {
                 <h2 className="text-xl font-medium text-black">
                   Experiencia
                 </h2>
-                <p>
+                <p className="text-gray-500 tracking-tight md:text-base">
                   El estudio cuenta con experiencia en el desarrollo de proyectos de diversa escala y tipología, incluyendo obras institucionales, educativas, comerciales, residenciales y espacios públicos, participando en las distintas etapas del proceso constructivo:
                 </p>
                 <ExperienceList />
@@ -98,7 +98,7 @@ export default function StudioPage() {
                 <h2 className="text-xl font-medium text-black">
                   Nuestro objetivo
                 </h2>
-                <p>
+                <p className="text-gray-500 tracking-tight md:text-base">
                   Nuestro objetivo es <b>garantizar soluciones arquitectónicas integrales</b>, asegurando el adecuado control técnico y la correcta materialización de cada proyecto, mediante una práctica profesional responsable, precisa y comprometida con la calidad de la obra construida.
                 </p>
               </div>
